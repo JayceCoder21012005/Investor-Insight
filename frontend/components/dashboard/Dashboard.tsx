@@ -79,12 +79,12 @@ export function Dashboard({ profileId }: { profileId: string }) {
       </header>
 
       <Tabs value={tab} onValueChange={(v) => setTab(v as TabId)} className="gap-6">
-        <TabsList aria-label="Các mục của bảng điều khiển" className="h-auto w-full flex-wrap justify-start gap-3 bg-transparent p-0">
+        <TabsList aria-label="Các mục của bảng điều khiển" className="grid w-full grid-cols-2 gap-3 bg-transparent p-0 group-data-horizontal/tabs:h-auto sm:flex sm:flex-wrap sm:justify-start">
           {TABS.map(({ id, label, icon: Icon }) => (
             <TabsTrigger
               key={id}
               value={id}
-              className="comic-press h-10 flex-none rounded-lg border-border bg-card px-4 text-sm font-bold text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-active:bg-primary data-active:text-primary-foreground"
+              className="comic-press h-10 w-full flex-none rounded-lg sm:w-auto border-border bg-card px-4 text-sm font-bold text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-active:bg-primary data-active:text-primary-foreground"
             >
               <Icon aria-hidden />
               {label}
