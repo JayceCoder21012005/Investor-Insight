@@ -1,0 +1,7 @@
+---
+type: llm
+focus: trace
+weight: 1
+---
+
+The result matches this description: The analysis grounds itself in the real specs (03 Realized, 04 metrics, 05 flags, 10 frontend) and the plan. It spots that win rate is undefined in the project (unit of counting, zero P&L, fee/tax inclusion, sample gate) and that making it a flag would touch many specs. It asks few, ranked questions with a recommended default, gives a hand-computable acceptance example, lists impact including formula_version, and does not write code or edit specs.

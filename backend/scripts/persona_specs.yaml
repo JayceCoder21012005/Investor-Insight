@@ -1,0 +1,158 @@
+# Persona behavior specs. Ranges are [lo, hi]; each seed draws one value per range, so some cases
+# land near or below the detector's cutoffs on purpose.
+# This file is written BEFORE and independently of the detector: it must not reference its settings.
+common:
+  capital: [300000000, 800000000]   # VND, starting cash
+  price_noise: [0.995, 1.005]       # trade price = adjusted close x U(...), clipped to the day's [low, high]
+  warmup_sessions: 8                # no trades in the first sessions so price-history signals exist
+  fee_reserve: 0.004                # cash kept back per BUY to cover brokerage later (fees are applied on load)
+  sell_cost: 0.004                  # estimated fee + tax subtracted from sell proceeds when tracking cash
+  universe:                         # tradable pool for personas that pick random stocks
+    [FPT, VCB, CTG, TCB, MBB, ACB, VPB, HDB, HPG, MWG, VNM, MSN, VIC, VHM, GAS, SSI, VND, PNJ, REE, DGC]
+
+personas:
+  - id: P01
+    title: "Giao dịch dày"
+    description: "Mua bán liên tục, mỗi lệnh giữ vài phiên rồi chốt."
+    tier: balanced
+    answers: [2, 2, 3, 3, 2]
+    labels: [overtrading]
+    behaviors: [overtrading]
+    params:
+      trades_per_month: [15, 25]
+      hold_sessions: [2, 10]
+      size_pct: [0.08, 0.15]        # share of equity per entry
+      pool_size: [8, 12]
+
+  - id: P02
+    title: "Dồn vốn một mã"
+    description: "Một mã chiếm khoảng một nửa danh mục, phần còn lại chia cho 4-5 mã."
+    tier: growth
+    answers: [3, 3, 3, 4, 3]
+    labels: [concentration, insufficient_data]
+    behaviors: [concentration]
+    params:
+      main_weight: [0.45, 0.55]
+      other_count: [4, 5]
+      invest_fraction: [0.85, 0.95]
+
+  - id: P03
+    title: "Chốt lời sớm, giữ lỗ lâu"
+    description: "Bán khi lãi 5-12%, giữ mã đang lỗ tới khi lỗ sâu hoặc hết kỳ."
+    tier: balanced
+    answers: [2, 2, 3, 2, 3]
+    labels: [disposition]
+    behaviors: [disposition]
+    params:
+      win_target: [0.05, 0.12]
+      loss_stop: [0.22, 0.28]
+      slots: [8, 10]
+      entry_prob: [0.25, 0.4]
+
+  - id: P04
+    title: "Mua đuổi giá tăng"
+    description: "Phần lớn lệnh mua diễn ra sau khi mã đã tăng mạnh trong 5 phiên."
+    tier: balanced
+    answers: [2, 1, 3, 3, 2]
+    labels: [chasing, insufficient_data]
+    behaviors: [chasing]
+    params:
+      chase_share: [0.5, 0.7]
+      rise: [0.08, 0.15]            # the 5-session rise that makes a stock look "hot"
+      interval_sessions: [4, 8]
+      size_pct: [0.015, 0.03]       # share of starting capital per buy
+
+  - id: P05
+    title: "Lệch khẩu vị rủi ro"
+    description: "Khai báo thận trọng nhưng chỉ nắm 3-4 mã biến động mạnh."
+    tier: conservative
+    answers: [2, 1, 1, 1, 2]
+    labels: [risk_mismatch, insufficient_data]
+    behaviors: [risk_mismatch]
+    pool: [SSI, VND, DGC, HPG]
+    params:
+      stock_count: [3, 4]
+      invest_fraction: [0.85, 0.95]
+      top_ups_per_month: [1, 2]
+      top_up_pct: [0.01, 0.03]
+
+  - id: P06
+    title: "Giao dịch dày và ngược vị thế"
+    description: "Vào ra nhanh, chỉ bán khi đang lãi, để mã lỗ nằm lại."
+    tier: growth
+    answers: [3, 3, 3, 3, 3]
+    labels: [overtrading, disposition]
+    behaviors: [overtrading, disposition]
+    params:
+      trades_per_month: [15, 25]
+      hold_sessions: [2, 8]
+      size_pct: [0.05, 0.1]
+      pool_size: [10, 14]
+      loss_stop: [0.22, 0.28]
+
+  - id: P07
+    title: "Tập trung và mua đuổi"
+    description: "Một mã chiếm hơn nửa danh mục, các lệnh mua thêm đa phần theo đà tăng."
+    tier: growth
+    answers: [4, 3, 3, 3, 3]
+    labels: [concentration, chasing, insufficient_data]
+    behaviors: [concentration, chasing]
+    params:
+      # The chasing buys spend the cash left after the first purchase and dilute the main stock, so it
+      # starts above half: 0.6-0.7 of 75-80% invested ends near 0.45-0.55 once the cash is used.
+      main_weight: [0.6, 0.7]
+      other_count: [3, 4]
+      invest_fraction: [0.75, 0.8]
+      rebalance_prob: [0.0, 0.2]   # rarely tops up the main stock, so most buys are the chasing ones
+      chase_share: [0.5, 0.7]
+      rise: [0.08, 0.15]
+      interval_sessions: [4, 8]
+      size_pct: [0.02, 0.03]       # a round lot of a 100k-VND hot stock must still be affordable (10M VND)
+
+  - id: P08
+    title: "Mua định kỳ, không bán"
+    description: "Mỗi tháng mua đều 5 mã lớn, giữ dài hạn."
+    tier: conservative
+    answers: [3, 1, 1, 2, 2]
+    labels: [insufficient_data]
+    behaviors: [dca]
+    pool: [VCB, ACB, VNM, FPT, PNJ]
+    params:
+      monthly_fraction: [0.06, 0.075]
+
+  - id: P09
+    title: "Đa dạng, cân bằng lại hằng quý"
+    description: "8-10 mã, mỗi quý đưa tỷ trọng về đều nhau."
+    tier: balanced
+    answers: [3, 2, 3, 3, 2]
+    labels: []
+    behaviors: [rebalance]
+    params:
+      stock_count: [8, 10]
+      invest_fraction: [0.85, 0.95]
+      rebalance_every_sessions: [60, 65]
+
+  - id: P10
+    title: "Rất ít lệnh"
+    description: "Chỉ 6 lệnh mua 6 mã khác nhau trong cả kỳ, không đủ dữ liệu để kết luận."
+    tier: balanced
+    answers: [2, 1, 2, 3, 3]
+    labels: [insufficient_data]
+    behaviors: [few_trades]
+    params:
+      size_pct: [0.08, 0.14]
+
+  - id: P11
+    title: "Bán theo đám đông"
+    description: "Khoảng 60% lệnh bán rơi vào phiên thị trường giảm mạnh hoặc phiên liền sau."
+    tier: balanced
+    answers: [2, 2, 3, 3, 2]
+    labels: [herding]
+    behaviors: [herding]
+    params:
+      pool_size: [8, 10]
+      monthly_fraction: [0.08, 0.1]
+      sell_events: [24, 34]
+      herd_share: [0.55, 0.7]
+      index_drop: [-0.025, -0.015]  # what this investor feels as a "market panic"
+      sell_fraction: [0.4, 0.9]

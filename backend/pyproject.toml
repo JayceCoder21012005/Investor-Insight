@@ -1,0 +1,37 @@
+[project]
+name = "backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.20.1",
+    "anthropic>=2.9.0",
+    "fastapi>=0.163.1",
+    "google-genai>=3.3.0",
+    "pandas>=3.1.1",
+    "psycopg[binary]>=3.3.9",
+    "pyarrow>=26.0.1",
+    "pydantic>=2.14.3",
+    "pydantic-settings>=2.16.3",
+    "python-multipart>=0.0.34",
+    "pyyaml>=6.0.3",
+    "sqlmodel>=0.0.50",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+# Implicit string concatenation is how the Vietnamese templates are written; broad except is deliberate in report.py.
+ignore = ["ISC004", "BLE001", "C408", "FLY002", "B008"]

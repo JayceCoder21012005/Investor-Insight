@@ -1,0 +1,113 @@
+{
+  "P01_s1": [
+    "overtrading"
+  ],
+  "P01_s2": [
+    "overtrading"
+  ],
+  "P01_s3": [
+    "overtrading"
+  ],
+  "P02_s1": [
+    "concentration",
+    "insufficient_data"
+  ],
+  "P02_s2": [
+    "concentration",
+    "insufficient_data"
+  ],
+  "P02_s3": [
+    "concentration",
+    "insufficient_data"
+  ],
+  "P03_s1": [
+    "disposition"
+  ],
+  "P03_s2": [
+    "disposition"
+  ],
+  "P03_s3": [
+    "disposition"
+  ],
+  "P04_s1": [
+    "chasing",
+    "insufficient_data"
+  ],
+  "P04_s2": [
+    "chasing",
+    "insufficient_data"
+  ],
+  "P04_s3": [
+    "chasing",
+    "insufficient_data"
+  ],
+  "P05_s1": [
+    "risk_mismatch",
+    "insufficient_data"
+  ],
+  "P05_s2": [
+    "risk_mismatch",
+    "insufficient_data"
+  ],
+  "P05_s3": [
+    "risk_mismatch",
+    "insufficient_data"
+  ],
+  "P06_s1": [
+    "overtrading",
+    "disposition"
+  ],
+  "P06_s2": [
+    "overtrading",
+    "disposition"
+  ],
+  "P06_s3": [
+    "overtrading",
+    "disposition"
+  ],
+  "P07_s1": [
+    "concentration",
+    "chasing",
+    "insufficient_data"
+  ],
+  "P07_s2": [
+    "concentration",
+    "chasing",
+    "insufficient_data"
+  ],
+  "P07_s3": [
+    "concentration",
+    "chasing",
+    "insufficient_data"
+  ],
+  "P08_s1": [
+    "insufficient_data"
+  ],
+  "P08_s2": [
+    "insufficient_data"
+  ],
+  "P08_s3": [
+    "insufficient_data"
+  ],
+  "P09_s1": [],
+  "P09_s2": [],
+  "P09_s3": [],
+  "P10_s1": [
+    "insufficient_data"
+  ],
+  "P10_s2": [
+    "insufficient_data"
+  ],
+  "P10_s3": [
+    "insufficient_data"
+  ],
+  "P11_s1": [
+    "herding"
+  ],
+  "P11_s2": [
+    "herding"
+  ],
+  "P11_s3": [
+    "herding"
+  ]
+}

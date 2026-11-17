@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: price-band-validation-conflict
+expected_outcome: |
+  The analysis reads both the plan and spec 02, quotes both rules, and confirms they differ (exchange bands vs the low*0.95 / high*1.05 rule) and that no exchange per symbol exists in sectors.json/PriceStore. It applies the source-authority order, recommends a resolution while marking it for confirmation, notes both are warnings not blocks and that prices are adjusted, lists affected specs (01, 02, tests), and proposes exact replacement spec text without editing spec files.

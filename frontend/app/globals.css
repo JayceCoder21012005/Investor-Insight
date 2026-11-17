@@ -1,0 +1,297 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Light theme only. `dark:` stays tied to a .dark class that is never set, so an OS in dark mode
+   cannot switch on the dark: styles shipped inside the shadcn components. */
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Theme "Chàm & Nghệ": indigo (chàm, the traditional dye) carries every action; turmeric gold (nghệ) is a
+ * sparing highlight. Status colors (good / attention) are separate hues so they never read as branding.
+ * Chart 1 / chart 2 are an indigo-orange pair that stays distinct for color-blind readers.
+ */
+/*
+ * Theme "Comic · Chàm & Nghệ": comic-book panels inked in deep indigo (chàm) with turmeric yellow (nghệ) pops.
+ * Every surface has a solid ink border and a hard offset shadow (no blur); things you can press move into
+ * their shadow. Status colors (good / attention) keep their own hues so they never read as decoration.
+ */
+:root {
+  --font-sans: "Grandstander", "Segoe UI", system-ui, sans-serif;
+  --font-comic: "Bangers", "Impact", "Arial Black", sans-serif;
+  --font-hand: "Patrick Hand", "Grandstander", "Comic Sans MS", cursive;
+  --panel-accent: var(--ink);
+  --ink: oklch(0.2 0.05 275);
+  --shadow-x: 4px;
+  --shadow-y: 4px;
+  --border-w: 2.5px;
+
+  --background: oklch(0.975 0.025 88);
+  --foreground: oklch(0.2 0.05 275);
+  --card: oklch(0.995 0.008 90);
+  --card-foreground: oklch(0.2 0.05 275);
+  --popover: oklch(0.995 0.008 90);
+  --popover-foreground: oklch(0.2 0.05 275);
+  --primary: oklch(0.52 0.21 272);
+  --primary-foreground: oklch(0.99 0.01 90);
+  --secondary: oklch(0.9 0.16 95);
+  --secondary-foreground: oklch(0.2 0.05 275);
+  --muted: oklch(0.94 0.03 88);
+  --muted-foreground: oklch(0.42 0.04 275);
+  --accent: oklch(0.92 0.06 275);
+  --accent-foreground: oklch(0.3 0.12 275);
+  --destructive: oklch(0.58 0.22 22);
+  --border: oklch(0.2 0.05 275);
+  --input: oklch(0.2 0.05 275);
+  --ring: oklch(0.52 0.21 272);
+
+  --gold: oklch(0.88 0.17 92);
+  --gold-foreground: oklch(0.2 0.05 275);
+  --pink: oklch(0.72 0.17 0);
+  --sky: oklch(0.8 0.11 225);
+  --mint: oklch(0.85 0.12 165);
+  --success: oklch(0.45 0.13 155);
+  --success-soft: oklch(0.88 0.12 160);
+  --warning: oklch(0.42 0.13 45);
+  --warning-soft: oklch(0.86 0.14 70);
+  --info-soft: oklch(0.88 0.07 275);
+
+  --chart-1: oklch(0.52 0.21 272);
+  --chart-2: oklch(0.72 0.18 50);
+  --chart-3: oklch(0.65 0.12 185);
+  --chart-4: oklch(0.65 0.18 0);
+  --chart-5: oklch(0.5 0.03 275);
+  --chart-grid: oklch(0.2 0.05 275 / 14%);
+  --halftone: oklch(0.2 0.05 275 / 9%);
+
+  --radius: 0.6rem;
+  --sidebar: oklch(0.975 0.025 88);
+  --sidebar-foreground: oklch(0.2 0.05 275);
+  --sidebar-primary: oklch(0.52 0.21 272);
+  --sidebar-primary-foreground: oklch(0.99 0.01 90);
+  --sidebar-accent: oklch(0.92 0.06 275);
+  --sidebar-accent-foreground: oklch(0.3 0.12 275);
+  --sidebar-border: oklch(0.2 0.05 275);
+  --sidebar-ring: oklch(0.52 0.21 272);
+}
+
+@theme inline {
+  --font-heading: var(--font-comic);
+  --font-comic: var(--font-comic);
+  --font-hand: var(--font-hand);
+  --color-ink: var(--ink);
+  --color-pink: var(--pink);
+  --color-sky: var(--sky);
+  --color-mint: var(--mint);
+  --font-sans: var(--font-sans);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-info-soft: var(--info-soft);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* halftone paper: a tiny dot screen, like the printed colour areas of an old comic */
+    background-image: radial-gradient(var(--halftone) 1.2px, transparent 1.3px);
+    background-size: 14px 14px;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--gold-foreground);
+  }
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* An inked comic panel: solid border + hard offset shadow, no blur. */
+  .comic-panel {
+    border: var(--border-w) solid var(--border);
+    box-shadow: var(--shadow-x) var(--shadow-y) 0 0 var(--ink);
+  }
+  /* Accent panel: the hard shadow takes the card's own colour, outlined in ink, so the card stays paper-white
+     but every panel has its own personality. Set --panel-accent with the .accent-* classes below. */
+  .comic-panel.has-accent {
+    box-shadow:
+      6px 6px 0 0 var(--panel-accent),
+      6px 6px 0 var(--border-w) var(--ink);
+  }
+  /* Pressable card with a coloured shadow (article cards). */
+  /* Pressable: lifts on hover, presses flat into its shadow on click. The border colour is set here with
+     !important because shadcn's button base class carries `border-transparent`. */
+  .comic-press {
+    border: var(--border-w) solid var(--ink) !important;
+    box-shadow: 3px 3px 0 0 var(--ink);
+    transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+  }
+  .comic-press:hover:not(:disabled) {
+    transform: translate(-1.5px, -1.5px);
+    box-shadow: 4.5px 4.5px 0 0 var(--ink);
+  }
+  .comic-press:active:not(:disabled) {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 0 var(--ink);
+  }
+  .comic-press.comic-press-accent {
+    box-shadow: 5px 5px 0 0 var(--panel-accent), 5px 5px 0 var(--border-w) var(--ink);
+  }
+  .comic-press.comic-press-accent:hover:not(:disabled) {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 0 var(--panel-accent), 7px 7px 0 var(--border-w) var(--ink);
+  }
+  .comic-press.comic-press-accent:active:not(:disabled) {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 0 var(--panel-accent), 0 0 0 0 var(--ink);
+  }
+  .accent-indigo { --panel-accent: var(--primary); }
+  .accent-gold { --panel-accent: var(--gold); }
+  .accent-pink { --panel-accent: var(--pink); }
+  .accent-sky { --panel-accent: var(--sky); }
+  .accent-mint { --panel-accent: var(--mint); }
+  .accent-orange { --panel-accent: var(--chart-2); }
+  /* A folded corner in the accent colour (top-right), like a page tab. */
+  .comic-corner {
+    position: relative;
+  }
+  .comic-corner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    /* accent triangle with an ink fold line along the diagonal */
+    background: linear-gradient(225deg, var(--panel-accent) 0 47%, var(--ink) 47% 55%, transparent 55%);
+    border-top-right-radius: calc(var(--radius) * 1.4 - 3px);
+    pointer-events: none;
+  }
+  .comic-title {
+    font-family: var(--font-comic);
+    font-weight: 400;
+    letter-spacing: 0.035em;
+    line-height: 1.12;
+  }
+  /* Cover lettering: coloured fill, ink outline, hard drop. For the one big title per page. */
+  .comic-headline {
+    font-family: var(--font-comic);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.12;
+    color: var(--primary);
+    -webkit-text-stroke: 2px var(--ink);
+    paint-order: stroke fill;
+    text-shadow: 3px 3px 0 var(--ink);
+  }
+  .comic-headline .pop {
+    color: var(--gold);
+  }
+  .comic-shout {
+    font-family: var(--font-comic);
+    letter-spacing: 0.03em;
+    line-height: 1;
+    color: var(--card);
+    -webkit-text-stroke: 1.5px var(--ink);
+    paint-order: stroke fill;
+    text-shadow: 3px 3px 0 var(--ink);
+  }
+  /* A starburst ("POW!") shape for stickers. */
+  .comic-burst {
+    clip-path: polygon(50% 0%, 61% 18%, 82% 7%, 79% 30%, 100% 35%, 84% 52%, 98% 70%, 75% 72%, 74% 95%, 55% 82%,
+      40% 100%, 32% 79%, 10% 88%, 17% 64%, 0% 52%, 17% 38%, 6% 17%, 29% 21%, 37% 0%);
+  }
+  /* Halftone fill for accents (hero corner, empty states). */
+  .halftone {
+    background-image: radial-gradient(currentColor 1.4px, transparent 1.6px);
+    background-size: 9px 9px;
+  }
+  /* Speech bubble with a tail at the bottom-left. */
+  .comic-bubble {
+    position: relative;
+  }
+  .comic-bubble::after {
+    content: "";
+    position: absolute;
+    left: 2.25rem;
+    bottom: -15px;
+    width: 26px;
+    height: 16px;
+    background: var(--card);
+    border-left: var(--border-w) solid var(--border);
+    border-bottom: var(--border-w) solid var(--border);
+    transform: skewX(-35deg);
+    border-bottom-left-radius: 3px;
+  }
+}
+
+/* Rendered article markdown */
+.article h1 { font-size: 1.25rem; font-weight: 600; margin-top: 0.5rem; }
+.article h2 { font-size: 1.05rem; font-weight: 600; margin-top: 1.25rem; color: var(--primary); }
+.article ul { list-style: disc; padding-left: 1.25rem; }
+.article ol { list-style: decimal; padding-left: 1.25rem; }
+.article li { margin: 0.25rem 0; }
+.article p { margin: 0.6rem 0; }
+.article strong { color: var(--foreground); }

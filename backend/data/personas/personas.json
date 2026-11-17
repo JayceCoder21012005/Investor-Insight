@@ -1,0 +1,105 @@
+[
+  {
+    "persona_id": "P01",
+    "title": "Giao dịch dày",
+    "tier": "balanced",
+    "description": "Mua bán liên tục, mỗi lệnh giữ vài phiên rồi chốt.",
+    "labels": [
+      "overtrading"
+    ]
+  },
+  {
+    "persona_id": "P02",
+    "title": "Dồn vốn một mã",
+    "tier": "growth",
+    "description": "Một mã chiếm khoảng một nửa danh mục, phần còn lại chia cho 4-5 mã.",
+    "labels": [
+      "concentration",
+      "insufficient_data"
+    ]
+  },
+  {
+    "persona_id": "P03",
+    "title": "Chốt lời sớm, giữ lỗ lâu",
+    "tier": "balanced",
+    "description": "Bán khi lãi 5-12%, giữ mã đang lỗ tới khi lỗ sâu hoặc hết kỳ.",
+    "labels": [
+      "disposition"
+    ]
+  },
+  {
+    "persona_id": "P04",
+    "title": "Mua đuổi giá tăng",
+    "tier": "balanced",
+    "description": "Phần lớn lệnh mua diễn ra sau khi mã đã tăng mạnh trong 5 phiên.",
+    "labels": [
+      "chasing",
+      "insufficient_data"
+    ]
+  },
+  {
+    "persona_id": "P05",
+    "title": "Lệch khẩu vị rủi ro",
+    "tier": "conservative",
+    "description": "Khai báo thận trọng nhưng chỉ nắm 3-4 mã biến động mạnh.",
+    "labels": [
+      "risk_mismatch",
+      "insufficient_data"
+    ]
+  },
+  {
+    "persona_id": "P06",
+    "title": "Giao dịch dày và ngược vị thế",
+    "tier": "growth",
+    "description": "Vào ra nhanh, chỉ bán khi đang lãi, để mã lỗ nằm lại.",
+    "labels": [
+      "overtrading",
+      "disposition"
+    ]
+  },
+  {
+    "persona_id": "P07",
+    "title": "Tập trung và mua đuổi",
+    "tier": "growth",
+    "description": "Một mã chiếm hơn nửa danh mục, các lệnh mua thêm đa phần theo đà tăng.",
+    "labels": [
+      "concentration",
+      "chasing",
+      "insufficient_data"
+    ]
+  },
+  {
+    "persona_id": "P08",
+    "title": "Mua định kỳ, không bán",
+    "tier": "conservative",
+    "description": "Mỗi tháng mua đều 5 mã lớn, giữ dài hạn.",
+    "labels": [
+      "insufficient_data"
+    ]
+  },
+  {
+    "persona_id": "P09",
+    "title": "Đa dạng, cân bằng lại hằng quý",
+    "tier": "balanced",
+    "description": "8-10 mã, mỗi quý đưa tỷ trọng về đều nhau.",
+    "labels": []
+  },
+  {
+    "persona_id": "P10",
+    "title": "Rất ít lệnh",
+    "tier": "balanced",
+    "description": "Chỉ 6 lệnh mua 6 mã khác nhau trong cả kỳ, không đủ dữ liệu để kết luận.",
+    "labels": [
+      "insufficient_data"
+    ]
+  },
+  {
+    "persona_id": "P11",
+    "title": "Bán theo đám đông",
+    "tier": "balanced",
+    "description": "Khoảng 60% lệnh bán rơi vào phiên thị trường giảm mạnh hoặc phiên liền sau.",
+    "labels": [
+      "herding"
+    ]
+  }
+]

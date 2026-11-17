@@ -1,0 +1,892 @@
+{
+  "formula_version": "0.3",
+  "llm_model": "gemini-3.1-flash-lite",
+  "run_date": "2026-11-17",
+  "git_commit": "n/a",
+  "price_source": "VNDIRECT, 2025-11-01 đến 2026-10-31",
+  "runs": 3,
+  "detection": {
+    "n_files": 33,
+    "per_flag": {
+      "overtrading": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8333333333333334
+      },
+      "concentration": {
+        "tp": 6,
+        "fp": 8,
+        "fn": 0,
+        "precision": 0.42857142857142855,
+        "recall": 1.0
+      },
+      "disposition": {
+        "tp": 6,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0
+      },
+      "chasing": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.6666666666666666
+      },
+      "herding": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "risk_mismatch": {
+        "tp": 3,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0
+      },
+      "overconfidence": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8
+      },
+      "insufficient_data": {
+        "tp": 18,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.8571428571428571,
+        "recall": 1.0
+      }
+    },
+    "confusion": {
+      "P01": {
+        "overtrading": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 1,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 2,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 0,
+          "seeds": 3
+        }
+      },
+      "P02": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 3,
+          "seeds": 3
+        }
+      },
+      "P03": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 0,
+          "seeds": 3
+        }
+      },
+      "P04": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 1,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 3,
+          "seeds": 3
+        }
+      },
+      "P05": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 3,
+          "seeds": 3
+        }
+      },
+      "P06": {
+        "overtrading": {
+          "fired": 2,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 1,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 0,
+          "seeds": 3
+        }
+      },
+      "P07": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 1,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 3,
+          "seeds": 3
+        }
+      },
+      "P08": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 3,
+          "seeds": 3
+        }
+      },
+      "P09": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 3,
+          "seeds": 3
+        }
+      },
+      "P10": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 1,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 3,
+          "seeds": 3
+        }
+      },
+      "P11": {
+        "overtrading": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "concentration": {
+          "fired": 1,
+          "seeds": 3
+        },
+        "disposition": {
+          "fired": 2,
+          "seeds": 3
+        },
+        "chasing": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "herding": {
+          "fired": 3,
+          "seeds": 3
+        },
+        "risk_mismatch": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "overconfidence": {
+          "fired": 0,
+          "seeds": 3
+        },
+        "insufficient_data": {
+          "fired": 0,
+          "seeds": 3
+        }
+      }
+    },
+    "expected": {
+      "P01": [
+        "overtrading"
+      ],
+      "P02": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P03": [
+        "disposition"
+      ],
+      "P04": [
+        "chasing",
+        "insufficient_data"
+      ],
+      "P05": [
+        "risk_mismatch",
+        "insufficient_data"
+      ],
+      "P06": [
+        "overtrading",
+        "disposition"
+      ],
+      "P07": [
+        "concentration",
+        "chasing",
+        "insufficient_data"
+      ],
+      "P08": [
+        "insufficient_data"
+      ],
+      "P09": [],
+      "P10": [
+        "insufficient_data"
+      ],
+      "P11": [
+        "herding"
+      ]
+    },
+    "predictions": {
+      "P01_s1": [
+        "concentration",
+        "overconfidence",
+        "overtrading",
+        "risk_mismatch"
+      ],
+      "P01_s2": [
+        "concentration",
+        "disposition",
+        "overconfidence",
+        "overtrading"
+      ],
+      "P01_s3": [
+        "concentration",
+        "overconfidence",
+        "overtrading",
+        "risk_mismatch"
+      ],
+      "P02_s1": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P02_s2": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P02_s3": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P03_s1": [
+        "disposition"
+      ],
+      "P03_s2": [
+        "disposition"
+      ],
+      "P03_s3": [
+        "disposition"
+      ],
+      "P04_s1": [
+        "chasing",
+        "concentration",
+        "insufficient_data"
+      ],
+      "P04_s2": [
+        "chasing",
+        "insufficient_data"
+      ],
+      "P04_s3": [
+        "chasing",
+        "insufficient_data"
+      ],
+      "P05_s1": [
+        "concentration",
+        "insufficient_data",
+        "risk_mismatch"
+      ],
+      "P05_s2": [
+        "concentration",
+        "insufficient_data",
+        "risk_mismatch"
+      ],
+      "P05_s3": [
+        "concentration",
+        "insufficient_data",
+        "risk_mismatch"
+      ],
+      "P06_s1": [
+        "disposition",
+        "overtrading"
+      ],
+      "P06_s2": [
+        "disposition"
+      ],
+      "P06_s3": [
+        "disposition",
+        "overconfidence",
+        "overtrading"
+      ],
+      "P07_s1": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P07_s2": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P07_s3": [
+        "chasing",
+        "concentration",
+        "insufficient_data"
+      ],
+      "P08_s1": [
+        "insufficient_data"
+      ],
+      "P08_s2": [
+        "insufficient_data"
+      ],
+      "P08_s3": [
+        "insufficient_data"
+      ],
+      "P09_s1": [
+        "insufficient_data"
+      ],
+      "P09_s2": [
+        "insufficient_data"
+      ],
+      "P09_s3": [
+        "insufficient_data"
+      ],
+      "P10_s1": [
+        "insufficient_data"
+      ],
+      "P10_s2": [
+        "insufficient_data"
+      ],
+      "P10_s3": [
+        "insufficient_data",
+        "risk_mismatch"
+      ],
+      "P11_s1": [
+        "disposition",
+        "herding"
+      ],
+      "P11_s2": [
+        "herding"
+      ],
+      "P11_s3": [
+        "concentration",
+        "disposition",
+        "herding"
+      ]
+    },
+    "labels": {
+      "P01_s1": [
+        "overtrading",
+        "overconfidence"
+      ],
+      "P01_s2": [
+        "overtrading",
+        "overconfidence"
+      ],
+      "P01_s3": [
+        "overtrading",
+        "overconfidence"
+      ],
+      "P02_s1": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P02_s2": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P02_s3": [
+        "concentration",
+        "insufficient_data"
+      ],
+      "P03_s1": [
+        "disposition"
+      ],
+      "P03_s2": [
+        "disposition"
+      ],
+      "P03_s3": [
+        "disposition"
+      ],
+      "P04_s1": [
+        "chasing",
+        "insufficient_data"
+      ],
+      "P04_s2": [
+        "chasing",
+        "insufficient_data"
+      ],
+      "P04_s3": [
+        "chasing",
+        "insufficient_data"
+      ],
+      "P05_s1": [
+        "risk_mismatch",
+        "insufficient_data"
+      ],
+      "P05_s2": [
+        "risk_mismatch",
+        "insufficient_data"
+      ],
+      "P05_s3": [
+        "risk_mismatch",
+        "insufficient_data"
+      ],
+      "P06_s1": [
+        "overtrading",
+        "disposition"
+      ],
+      "P06_s2": [
+        "overtrading",
+        "disposition",
+        "overconfidence"
+      ],
+      "P06_s3": [
+        "overtrading",
+        "disposition",
+        "overconfidence"
+      ],
+      "P07_s1": [
+        "concentration",
+        "chasing",
+        "insufficient_data"
+      ],
+      "P07_s2": [
+        "concentration",
+        "chasing",
+        "insufficient_data"
+      ],
+      "P07_s3": [
+        "concentration",
+        "chasing",
+        "insufficient_data"
+      ],
+      "P08_s1": [
+        "insufficient_data"
+      ],
+      "P08_s2": [
+        "insufficient_data"
+      ],
+      "P08_s3": [
+        "insufficient_data"
+      ],
+      "P09_s1": [],
+      "P09_s2": [],
+      "P09_s3": [],
+      "P10_s1": [
+        "insufficient_data"
+      ],
+      "P10_s2": [
+        "insufficient_data"
+      ],
+      "P10_s3": [
+        "insufficient_data"
+      ],
+      "P11_s1": [
+        "herding"
+      ],
+      "P11_s2": [
+        "herding"
+      ],
+      "P11_s3": [
+        "herding"
+      ]
+    },
+    "derived_labels": {
+      "overconfidence": "overtrading AND performance.excess < 0"
+    }
+  },
+  "ai": {
+    "model": "gemini-3.1-flash-lite",
+    "reports": 99,
+    "runs_per_file": 3,
+    "answered": 99,
+    "api_errors": 0,
+    "first_attempt_pass_rate": 0.9494949494949495,
+    "final_pass_rate": 0.9797979797979798,
+    "violations": {
+      "number_not_found": 3,
+      "advice": 1
+    },
+    "violation_codes": {
+      "number_not_found": 3,
+      "schema": 1,
+      "advice": 1
+    },
+    "violation_examples": [
+      {
+        "file": "P05_s2",
+        "code": "number_not_found",
+        "scope": "strengths",
+        "detail": "số '521' không có trong số liệu được dẫn"
+      },
+      {
+        "file": "P05_s3",
+        "code": "number_not_found",
+        "scope": "insight:concentration",
+        "detail": "số '0.4139 tỷ' không có trong số liệu được dẫn"
+      },
+      {
+        "file": "P06_s2",
+        "code": "schema",
+        "scope": "report",
+        "detail": "1 validation error for ReportContent\nsummary\n  Value error, summary longer than 60 words [type=value_error, input_value='Trong 12 tháng qua, nh... thế lãi và lỗ.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error"
+      },
+      {
+        "file": "P07_s3",
+        "code": "advice",
+        "scope": "insight:chasing",
+        "detail": "có dấu hiệu khuyến nghị: giá\\s+mục\\s+tiêu"
+      },
+      {
+        "file": "P09_s1",
+        "code": "number_not_found",
+        "scope": "insight:insufficient_data",
+        "detail": "số '2' không có trong số liệu được dẫn; số này khớp chỉ số 'activity.trades_per_month', 'disposition.n_sell_days', 'activity.monthly_turnover.3.value': nếu đúng ý, thêm khóa đó vào evidence_keys của insight này"
+      }
+    ],
+    "latency_ms": {
+      "p50": 2776.0,
+      "max": 41637
+    },
+    "scope": "toàn bộ 33 tệp"
+  },
+  "speed": {
+    "files": 33,
+    "p50_ms": 7.409900000311609,
+    "max_ms": 83.42819999961648,
+    "synthetic_5000_rows_ms": 668.3811000002606
+  },
+  "thresholds": {
+    "formula_version": "0.3",
+    "min_sample": {
+      "sells": 10,
+      "buys": 10
+    },
+    "concentration": {
+      "hhi_warn": 0.25,
+      "top_symbol_warn": 0.4
+    },
+    "turnover": {
+      "monthly_warn": 1.0,
+      "spike_vs_3m": 2.0,
+      "spike_baseline_months": 3,
+      "spike_min_value": 1.0
+    },
+    "disposition": {
+      "de_warn": 0.05
+    },
+    "chasing": {
+      "lookback_sessions": 5,
+      "rise": 0.1,
+      "ratio_warn": 0.3
+    },
+    "herding": {
+      "index_drop": -0.02,
+      "include_next_session": true,
+      "lift_warn": 2.0
+    },
+    "investor_type": {
+      "long_hold_days": 90.0,
+      "long_hold_max_trades_per_month": 2.0
+    },
+    "risk_tiers": {
+      "conservative": {
+        "score": [
+          5,
+          9
+        ],
+        "hhi_max": 0.25,
+        "vol_ratio_max": 1.3
+      },
+      "balanced": {
+        "score": [
+          10,
+          14
+        ],
+        "hhi_max": 0.3,
+        "vol_ratio_max": 1.6
+      },
+      "growth": {
+        "score": [
+          15,
+          20
+        ],
+        "hhi_max": 0.45,
+        "vol_ratio_max": 2.0
+      }
+    },
+    "fees": {
+      "broker_tiers": [
+        [
+          100000000.0,
+          0.003
+        ],
+        [
+          300000000.0,
+          0.0025
+        ],
+        [
+          500000000.0,
+          0.002
+        ],
+        [
+          Infinity,
+          0.0015
+        ]
+      ],
+      "sell_tax": 0.001
+    },
+    "guardrail": {
+      "rel_tol": 0.01,
+      "abs_tol": 0.051,
+      "max_retries": 1,
+      "advice_patterns": [
+        "nên\\s+(mua|bán|chốt lời|cắt lỗ|giữ|nắm giữ|gom)",
+        "khuyến nghị\\s+(mua|bán|nắm giữ)",
+        "(sẽ|có thể|dự kiến)\\s+(tăng|giảm)\\s+giá",
+        "giá\\s+mục\\s+tiêu"
+      ]
+    }
+  }
+}

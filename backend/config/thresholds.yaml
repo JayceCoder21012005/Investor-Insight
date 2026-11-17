@@ -1,0 +1,59 @@
+formula_version: "0.3"
+
+min_sample:
+  sells: 10
+  buys: 10
+
+concentration:
+  hhi_warn: 0.25
+  top_symbol_warn: 0.40
+
+turnover:
+  monthly_warn: 1.0
+  spike_vs_3m: 2.0
+  spike_baseline_months: 3
+  spike_min_value: 1.0      # a spike month must itself reach this turnover: 0.5 in 0.2, = monthly_warn since 0.3
+
+disposition:
+  de_warn: 0.05
+
+chasing:
+  lookback_sessions: 5
+  rise: 0.10
+  ratio_warn: 0.30
+
+herding:
+  index_drop: -0.02
+  include_next_session: true
+  lift_warn: 2.0
+
+investor_type:
+  long_hold_days: 90
+  long_hold_max_trades_per_month: 2
+
+# vol_ratio_max: portfolio volatility allowed as a multiple of VN-Index volatility over the same sessions
+# (0.3; was an absolute vol_max 0.18/0.25/0.35, below the index's own volatility for "conservative").
+# conservative hhi_max 0.20 -> 0.25 in 0.3: five equal stocks are 0.20, so any price drift flagged them.
+risk_tiers:
+  conservative: {score: [5, 9], hhi_max: 0.25, vol_ratio_max: 1.3}
+  balanced: {score: [10, 14], hhi_max: 0.30, vol_ratio_max: 1.6}
+  growth: {score: [15, 20], hhi_max: 0.45, vol_ratio_max: 2.0}
+
+fees:
+  # [upper bound of daily trade value in VND (exclusive), rate]; DSC brokerage schedule from 2025-08-20
+  broker_tiers:
+    - [100000000, 0.003]
+    - [300000000, 0.0025]
+    - [500000000, 0.002]
+    - [.inf, 0.0015]
+  sell_tax: 0.001
+
+guardrail:
+  rel_tol: 0.01
+  abs_tol: 0.051
+  max_retries: 1
+  advice_patterns:
+    - "nên\\s+(mua|bán|chốt lời|cắt lỗ|giữ|nắm giữ|gom)"
+    - "khuyến nghị\\s+(mua|bán|nắm giữ)"
+    - "(sẽ|có thể|dự kiến)\\s+(tăng|giảm)\\s+giá"
+    - "giá\\s+mục\\s+tiêu"
