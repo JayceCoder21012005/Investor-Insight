@@ -168,6 +168,49 @@ def test_all_models_exhausted_raises_llm_error():
     assert len(client.calls) == 2
 
 
+def test_an_overloaded_model_falls_over_to_the_next_without_waiting():
+    sleeps = []
+    client = FlakyGenAI([HttpError(503)])
+    llm = GeminiLLM("k", "main", client=client, sleep=sleeps.append, fallback_models=("lite",))
+    assert llm.generate_json("s", "u", SCHEMA) == {"ok": True}
+    assert [c["model"] for c in client.calls] == ["main", "lite"] and sleeps == []
+    assert llm.model == "lite"
+
+
+def test_a_timeout_also_falls_over_to_the_next_model():
+    class ReadTimeout(Exception):
+        pass
+
+    client = FlakyGenAI([ReadTimeout("timed out")])
+    llm = GeminiLLM("k", "main", client=client, sleep=lambda s: None, fallback_models=("lite",))
+    assert llm.generate_json("s", "u", SCHEMA) == {"ok": True}
+    assert [c["model"] for c in client.calls] == ["main", "lite"]
+
+
+def test_a_busy_model_is_skipped_for_a_short_cooldown_only():
+    from app.ai.llm import BUSY_COOLDOWN_SECONDS
+
+    now = [0.0]
+    client = FlakyGenAI([HttpError(503)])
+    llm = GeminiLLM("k", "main", client=client, sleep=lambda s: None, fallback_models=("lite",),
+                    clock=lambda: now[0])
+    llm.generate_json("s", "u", SCHEMA)
+    llm.generate_json("s", "u", SCHEMA)
+    assert [c["model"] for c in client.calls] == ["main", "lite", "lite"]
+    assert BUSY_COOLDOWN_SECONDS < 3600
+    now[0] += BUSY_COOLDOWN_SECONDS + 1
+    llm.generate_json("s", "u", SCHEMA)
+    assert client.calls[-1]["model"] == "main"
+
+
+def test_the_last_model_still_retries_with_backoff_when_busy():
+    sleeps = []
+    client = FlakyGenAI([HttpError(503), HttpError(503), HttpError(503)])
+    llm = GeminiLLM("k", "main", client=client, sleep=sleeps.append, fallback_models=("lite",))
+    assert llm.generate_json("s", "u", SCHEMA) == {"ok": True}
+    assert [c["model"] for c in client.calls] == ["main", "lite", "lite", "lite"] and len(sleeps) == 2
+
+
 def test_fallback_models_come_from_settings():
     llm = build_llm(settings(gemini_api_key="k", llm_model="a", llm_fallback_models="b, c"))
     assert llm.models == ("a", "b", "c")

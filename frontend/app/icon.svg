@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Investor Insight mark: a comic hand-mirror ("look back at yourself") on a gold tile.
+       Colours are spelled out because a favicon cannot read the page's CSS variables. -->
+  <rect x="5" y="5" width="56" height="56" rx="13" fill="#1f1b3d"/>
+  <rect x="2" y="2" width="56" height="56" rx="13" fill="#f9d12c" stroke="#1f1b3d" stroke-width="3.5"/>
+  <!-- handle -->
+  <rect x="34" y="35" width="9" height="19" rx="3" transform="rotate(-40 38.5 44.5)" fill="#f08a24" stroke="#1f1b3d" stroke-width="3.5"/>
+  <!-- frame + glass -->
+  <circle cx="26" cy="25" r="17" fill="#4f46e5" stroke="#1f1b3d" stroke-width="3.5"/>
+  <circle cx="26" cy="25" r="11" fill="#fffdf5" stroke="#1f1b3d" stroke-width="3"/>
+  <!-- rising price line in the reflection -->
+  <path d="M19 29.5l4.5-4.5 3.5 3.5 6.5-7" fill="none" stroke="#4f46e5" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- shine -->
+  <path d="M13.5 17.5a14 14 0 0 1 6-6" fill="none" stroke="#fffdf5" stroke-width="2.8" stroke-linecap="round"/>
+</svg>

@@ -92,11 +92,19 @@ TRANSIENT_CODES = {429, 500, 502, 503, 504}  # busy or overloaded: worth a short
 TRANSPORT_ATTEMPTS = 3
 BACKOFF_SECONDS = 2.0
 QUOTA_COOLDOWN_SECONDS = 3600.0  # how long an out-of-quota model is skipped before it is tried again
+BUSY_COOLDOWN_SECONDS = 300.0  # an overloaded (503) or timing-out model is skipped for a few minutes
 DEFAULT_ANTHROPIC_MODEL = "claude-opus-5-5"
 
 
 def _is_quota_error(e: Exception) -> bool:
     return getattr(e, "code", None) == 429 and "quota" in str(e).lower()
+
+
+def _is_busy_error(e: Exception) -> bool:
+    """Overloaded, rate-limited (not out of quota) or timed out: another model may well answer right now."""
+    if _is_quota_error(e):
+        return False
+    return getattr(e, "code", None) in TRANSIENT_CODES or "timeout" in type(e).__name__.lower()
 
 
 class GeminiLLM:
@@ -134,12 +142,17 @@ class GeminiLLM:
         available = [m for m in self.models if self._exhausted_until.get(m, 0.0) <= now] or list(self.models)
         last: Exception | None = None
         for i, model in enumerate(available):
+            has_next = i < len(available) - 1
             try:
-                response = self._call(model, user, config)
+                # With another model to fall back on, a busy model is not waited for: move on at once.
+                response = self._call(model, user, config, attempts=1 if has_next else TRANSPORT_ATTEMPTS)
             except Exception as e:
                 last = e
-                if _is_quota_error(e) and i < len(available) - 1:
+                if has_next and _is_quota_error(e):
                     self._exhausted_until[model] = now + QUOTA_COOLDOWN_SECONDS
+                    continue
+                if has_next and _is_busy_error(e):
+                    self._exhausted_until[model] = now + BUSY_COOLDOWN_SECONDS
                     continue
                 raise LLMError(f"{type(e).__name__}: {e}") from e
             self._exhausted_until.pop(model, None)
@@ -147,13 +160,13 @@ class GeminiLLM:
             return self._parse(response)
         raise LLMError(f"{type(last).__name__}: {last}")  # pragma: no cover - the loop always returns or raises
 
-    def _call(self, model: str, user: str, config):
-        for attempt in range(TRANSPORT_ATTEMPTS):
+    def _call(self, model: str, user: str, config, attempts: int = TRANSPORT_ATTEMPTS):
+        for attempt in range(attempts):
             try:
                 return self._client.models.generate_content(model=model, contents=user, config=config)
             except Exception as e:
                 transient = getattr(e, "code", None) in TRANSIENT_CODES and not _is_quota_error(e)
-                if transient and attempt < TRANSPORT_ATTEMPTS - 1:
+                if transient and attempt < attempts - 1:
                     self._sleep(BACKOFF_SECONDS * (attempt + 1))
                     continue
                 raise
