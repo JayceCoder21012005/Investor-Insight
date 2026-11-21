@@ -1,0 +1,1759 @@
+{
+ "note": "5 real users, anonymised U1-U5. Prices VNDIRECT 2025-11-01..2026-11-20 (adjusted). Risk answers assumed [2,2,3,3,2].",
+ "core": {
+  "U1": {
+   "rows": 8,
+   "errors": [],
+   "warnings": [
+    "Dòng 1: Giá 14,450 nằm ngoài khoảng giá phiên 12,676–13,333 (±5%)",
+    "Dòng 3: Giá 70,800 nằm ngoài khoảng giá phiên 63,910–64,819 (±5%)",
+    "Dòng 4: Giá 67,100 nằm ngoài khoảng giá phiên 60,092–61,546 (±5%)"
+   ],
+   "raw": {
+    "rescaled_rows": 0,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-04-01",
+      "end": "2026-11-20",
+      "months": 8
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.20790587041158037,
+       "top_symbol": "FPT",
+       "top_symbol_weight": 0.350103734439834,
+       "top_sector": "Công nghệ",
+       "top_sector_weight": 0.350103734439834
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-04",
+         "value": 0.0
+        },
+        {
+         "month": "2026-05",
+         "value": 0.0
+        },
+        {
+         "month": "2026-06",
+         "value": 0.0
+        },
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 1.0
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 8
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.36025177937764874,
+       "benchmark_return": -0.008303336014986007,
+       "excess": -0.35194844336266273,
+       "vol_annual": 0.297335081378197,
+       "benchmark_vol": 0.16540757318928534,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -10728824.0,
+       "fees_total": 73824.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "risk_mismatch",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ]
+      },
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Cân bằng"
+    }
+   },
+   "adjusted": {
+    "rescaled_rows": 3,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-04-01",
+      "end": "2026-11-20",
+      "months": 8
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.21210390196190368,
+       "top_symbol": "FPT",
+       "top_symbol_weight": 0.357972978012007,
+       "top_sector": "Công nghệ",
+       "top_sector_weight": 0.357972978012007
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-04",
+         "value": 0.0
+        },
+        {
+         "month": "2026-05",
+         "value": 0.0
+        },
+        {
+         "month": "2026-06",
+         "value": 0.0
+        },
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 1.0
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 8
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.29248039126995984,
+       "benchmark_return": -0.008303336014986007,
+       "excess": -0.28417705525497383,
+       "vol_annual": 0.2773194122555935,
+       "benchmark_vol": 0.16540757318928534,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -9062794.0,
+       "fees_total": 73824.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "risk_mismatch",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ]
+      },
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Cân bằng"
+    }
+   }
+  },
+  "U2": {
+   "rows": 10,
+   "errors": [],
+   "warnings": [],
+   "raw": {
+    "rescaled_rows": 0,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-04-06",
+      "end": "2026-11-20",
+      "months": 8
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.21786706397694539,
+       "top_symbol": "GAS",
+       "top_symbol_weight": 0.31187790311877905,
+       "top_sector": "Năng lượng",
+       "top_sector_weight": 0.31187790311877905
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-04",
+         "value": 0.0
+        },
+        {
+         "month": "2026-05",
+         "value": 0.0
+        },
+        {
+         "month": "2026-06",
+         "value": 0.0
+        },
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.09214670973221384
+        },
+        {
+         "month": "2026-10",
+         "value": 0.37172969662112654
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.05798455079416755,
+       "trades_per_month": 1.25
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": 121.5,
+       "avg_days": 121.5
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.25,
+       "de": -0.25,
+       "n_sell_days": 2,
+       "n_sells": 2
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 8
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 2
+      },
+      "performance": {
+       "twr": -0.1543903310220588,
+       "benchmark_return": 0.008238855157344238,
+       "excess": -0.16262918617940303,
+       "vol_annual": 0.21090105883204424,
+       "benchmark_vol": 0.1665324709877975,
+       "realized_pnl": -779936.0,
+       "unrealized_pnl": -2617440.9999999995,
+       "fees_total": 133977.0,
+       "tax_total": 9400.0
+      }
+     },
+     "flags": [
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Nắm giữ dài hạn"
+    }
+   },
+   "adjusted": {
+    "rescaled_rows": 0,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-04-06",
+      "end": "2026-11-20",
+      "months": 8
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.21786706397694539,
+       "top_symbol": "GAS",
+       "top_symbol_weight": 0.31187790311877905,
+       "top_sector": "Năng lượng",
+       "top_sector_weight": 0.31187790311877905
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-04",
+         "value": 0.0
+        },
+        {
+         "month": "2026-05",
+         "value": 0.0
+        },
+        {
+         "month": "2026-06",
+         "value": 0.0
+        },
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.09214670973221384
+        },
+        {
+         "month": "2026-10",
+         "value": 0.37172969662112654
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.05798455079416755,
+       "trades_per_month": 1.25
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": 121.5,
+       "avg_days": 121.5
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.25,
+       "de": -0.25,
+       "n_sell_days": 2,
+       "n_sells": 2
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 8
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 2
+      },
+      "performance": {
+       "twr": -0.1543903310220588,
+       "benchmark_return": 0.008238855157344238,
+       "excess": -0.16262918617940303,
+       "vol_annual": 0.21090105883204424,
+       "benchmark_vol": 0.1665324709877975,
+       "realized_pnl": -779936.0,
+       "unrealized_pnl": -2617440.9999999995,
+       "fees_total": 133977.0,
+       "tax_total": 9400.0
+      }
+     },
+     "flags": [
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Nắm giữ dài hạn"
+    }
+   }
+  },
+  "U3": {
+   "rows": 17,
+   "errors": [],
+   "warnings": [],
+   "raw": {
+    "rescaled_rows": 0,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-09-09",
+      "end": "2026-11-20",
+      "months": 3
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.3526082454424424,
+       "top_symbol": "BID",
+       "top_symbol_weight": 0.44650817236255574,
+       "top_sector": "Ngân hàng",
+       "top_sector_weight": 0.7176820208023774
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 5.666666666666667
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 17
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.20225454899625395,
+       "benchmark_return": -0.0757093130172074,
+       "excess": -0.12654523597904654,
+       "vol_annual": 0.20354764358089825,
+       "benchmark_vol": 0.14404064434883995,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -8944030.0,
+       "fees_total": 94030.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "concentration",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ]
+      },
+      {
+       "id": "risk_mismatch",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ]
+      },
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Tập trung"
+    }
+   },
+   "adjusted": {
+    "rescaled_rows": 0,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-09-09",
+      "end": "2026-11-20",
+      "months": 3
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.3526082454424424,
+       "top_symbol": "BID",
+       "top_symbol_weight": 0.44650817236255574,
+       "top_sector": "Ngân hàng",
+       "top_sector_weight": 0.7176820208023774
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 5.666666666666667
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 17
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.20225454899625395,
+       "benchmark_return": -0.0757093130172074,
+       "excess": -0.12654523597904654,
+       "vol_annual": 0.20354764358089825,
+       "benchmark_vol": 0.14404064434883995,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -8944030.0,
+       "fees_total": 94030.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "concentration",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ]
+      },
+      {
+       "id": "risk_mismatch",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ]
+      },
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Tập trung"
+    }
+   }
+  },
+  "U4": {
+   "rows": 9,
+   "errors": [],
+   "warnings": [
+    "Dòng 2: Giá 21,950 nằm ngoài khoảng giá phiên 18,076–18,409 (±5%)",
+    "Dòng 3: Giá 29,550 nằm ngoài khoảng giá phiên 19,334–20,201 (±5%)",
+    "Dòng 4: Giá 22,700 nằm ngoài khoảng giá phiên 18,618–19,326 (±5%)",
+    "Dòng 5: Giá 25,150 nằm ngoài khoảng giá phiên 19,823–20,264 (±5%)",
+    "Dòng 6: Giá 25,000 nằm ngoài khoảng giá phiên 19,823–20,023 (±5%)",
+    "Dòng 7: Giá 16,400 nằm ngoài khoảng giá phiên 13,514–13,850 (±5%)",
+    "Dòng 8: Giá 25,800 nằm ngoài khoảng giá phiên 20,504–20,824 (±5%)",
+    "Dòng 9: Giá 24,850 nằm ngoài khoảng giá phiên 19,903–20,544 (±5%)"
+   ],
+   "raw": {
+    "rescaled_rows": 0,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-03-09",
+      "end": "2026-11-20",
+      "months": 9
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.6105084257600989,
+       "top_symbol": "MBB",
+       "top_symbol_weight": 0.767799352750809,
+       "top_sector": "Ngân hàng",
+       "top_sector_weight": 0.9563106796116504
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-03",
+         "value": 0.0
+        },
+        {
+         "month": "2026-04",
+         "value": 0.0
+        },
+        {
+         "month": "2026-05",
+         "value": 0.0
+        },
+        {
+         "month": "2026-06",
+         "value": 0.0
+        },
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 1.0
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 9
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.46374253659789644,
+       "benchmark_return": 0.021781351532862647,
+       "excess": -0.4855238881307591,
+       "vol_annual": 0.36196601484270274,
+       "benchmark_vol": 0.1794431845791695,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -10867060.999999998,
+       "fees_total": 47061.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "concentration",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ]
+      },
+      {
+       "id": "risk_mismatch",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ]
+      },
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Tập trung"
+    }
+   },
+   "adjusted": {
+    "rescaled_rows": 8,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-03-09",
+      "end": "2026-11-20",
+      "months": 9
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.6089887947147316,
+       "top_symbol": "MBB",
+       "top_symbol_weight": 0.7665525528014004,
+       "top_sector": "Ngân hàng",
+       "top_sector_weight": 0.9650407598844015
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-03",
+         "value": 0.0
+        },
+        {
+         "month": "2026-04",
+         "value": 0.0
+        },
+        {
+         "month": "2026-05",
+         "value": 0.0
+        },
+        {
+         "month": "2026-06",
+         "value": 0.0
+        },
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 1.0
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.0,
+       "n_buys": 9
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.07957169593053237,
+       "benchmark_return": 0.021781351532862647,
+       "excess": -0.10135304746339502,
+       "vol_annual": 0.2146942669147752,
+       "benchmark_vol": 0.1794431845791695,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -3157491.999999997,
+       "fees_total": 47061.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "concentration",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ]
+      },
+      {
+       "id": "risk_mismatch",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ]
+      },
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Tập trung"
+    }
+   }
+  },
+  "U5": {
+   "rows": 10,
+   "errors": [
+    "Dòng 2: Bán 300 HPG nhưng chỉ đang nắm giữ 0",
+    "Dòng 3: Bán 200 SSI nhưng chỉ đang nắm giữ 0",
+    "Dòng 7: Bán 100 MWG nhưng chỉ đang nắm giữ 0"
+   ],
+   "warnings": [
+    "Dòng 1: Giá 22,700 nằm ngoài khoảng giá phiên 18,826–19,201 (±5%)",
+    "Dòng 3: Giá 23,250 nằm ngoài khoảng giá phiên 18,384–18,824 (±5%)",
+    "Dòng 4: Giá 70,300 nằm ngoài khoảng giá phiên 63,819–65,637 (±5%)",
+    "Dòng 6: Giá 32,600 nằm ngoài khoảng giá phiên 21,434–22,034 (±5%)"
+   ],
+   "dropped_orphan_sells": [
+    2,
+    3,
+    7
+   ],
+   "raw": {
+    "rescaled_rows": 0,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-07-21",
+      "end": "2026-11-20",
+      "months": 5
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.2504642305552638,
+       "top_symbol": "MBB",
+       "top_symbol_weight": 0.3599605522682446,
+       "top_sector": "Ngân hàng",
+       "top_sector_weight": 0.5272189349112426
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 1.2
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.16666666666666666,
+       "n_buys": 6
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.33523804979713856,
+       "benchmark_return": -0.024136695636094663,
+       "excess": -0.3111013541610439,
+       "vol_annual": 0.4173535663885527,
+       "benchmark_vol": 0.168269573079099,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -6492692.999999999,
+       "fees_total": 47693.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "concentration",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ]
+      },
+      {
+       "id": "risk_mismatch",
+       "severity": "warn",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ]
+      },
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Tập trung"
+    }
+   },
+   "adjusted": {
+    "rescaled_rows": 3,
+    "metrics": {
+     "formula_version": "0.3",
+     "period": {
+      "start": "2026-07-21",
+      "end": "2026-11-20",
+      "months": 5
+     },
+     "profile": {
+      "tier": "balanced",
+      "level": "intermediate"
+     },
+     "metrics": {
+      "concentration": {
+       "hhi": 0.24552671253529232,
+       "top_symbol": "MBB",
+       "top_symbol_weight": 0.34397905759162306,
+       "top_sector": "Ngân hàng",
+       "top_sector_weight": 0.5659685863874346
+      },
+      "activity": {
+       "monthly_turnover": [
+        {
+         "month": "2026-07",
+         "value": 0.0
+        },
+        {
+         "month": "2026-08",
+         "value": 0.0
+        },
+        {
+         "month": "2026-09",
+         "value": 0.0
+        },
+        {
+         "month": "2026-10",
+         "value": 0.0
+        },
+        {
+         "month": "2026-11",
+         "value": 0.0
+        }
+       ],
+       "avg_turnover": 0.0,
+       "trades_per_month": 1.2
+      },
+      "holding": {
+       "avg_days_win": null,
+       "avg_days_loss": null,
+       "avg_days": null
+      },
+      "disposition": {
+       "pgr": 0.0,
+       "plr": 0.0,
+       "de": 0.0,
+       "n_sell_days": 0,
+       "n_sells": 0
+      },
+      "chasing": {
+       "ratio": 0.16666666666666666,
+       "n_buys": 6
+      },
+      "herding": {
+       "lift": 0.0,
+       "n_sells": 0
+      },
+      "performance": {
+       "twr": -0.08223314197078868,
+       "benchmark_return": -0.024136695636094663,
+       "excess": -0.05809644633469402,
+       "vol_annual": 0.2230895282829098,
+       "benchmark_vol": 0.168269573079099,
+       "realized_pnl": 0.0,
+       "unrealized_pnl": -3191153.0000000005,
+       "fees_total": 47693.0,
+       "tax_total": 0.0
+      }
+     },
+     "flags": [
+      {
+       "id": "insufficient_data",
+       "severity": "warn",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ]
+      }
+     ],
+     "investor_type": "Cân bằng"
+    }
+   }
+  }
+ },
+ "ai": {
+  "U1": [
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 39847,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Báo cáo ghi nhận mức độ tập trung danh mục và sự khác biệt về độ biến động so với thị trường chung. Các dữ liệu hiện tại dựa trên số lượng giao dịch còn hạn chế trong kỳ.",
+     "insights": [
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Chênh lệch mức độ rủi ro",
+       "observation": "Chỉ số tập trung HHI đạt 0.2121, độ biến động hàng năm vol_annual ở mức 0.2773 trong khi benchmark_vol là 0.1654.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Bạn có đang cảm thấy thoải mái với mức độ dao động giá cao hơn đáng kể so với thị trường chung hay không?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch hạn chế",
+       "observation": "Số lệnh bán n_sells là 0 và số lệnh mua n_sells tương ứng n_buys ghi nhận 8 lần giao dịch trong kỳ.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Với số lượng giao dịch hiện tại, liệu các quan sát này đã phản ánh đầy đủ thói quen phân bổ vốn của bạn chưa?"
+      }
+     ],
+     "strengths": [
+      "Danh mục có tỷ trọng phân bổ lớn nhất vào mã FPT thuộc ngành Công nghệ với mức 0.358."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 16785,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Báo cáo ghi nhận mức độ tập trung danh mục ở một mã với độ biến động lớn hơn thị trường chung. Số lượng giao dịch hiện tại ở mức thấp nên cần thêm thời gian quan sát.",
+     "insights": [
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Mức độ tập trung và biến động",
+       "observation": "Chỉ số tập trung HHI là 0.2121 với tỷ trọng mã lớn nhất là 0.358. Độ biến động hàng năm là 0.2773 cao hơn mức 0.1654 của thị trường chung.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Bạn có cân nhắc phân bổ rộng hơn khi danh mục có độ biến động cao hơn thị trường?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch hạn chế",
+       "observation": "Số lần bán là 0 và số lần mua là 8, cho thấy số lệnh chưa đủ để kết luận về khuynh hướng liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys"
+       ],
+       "self_check_question": "Khi có thêm nhiều giao dịch hơn, bạn sẽ theo dõi các chỉ số nào để đánh giá lại?"
+      }
+     ],
+     "strengths": [
+      "Duy trì tỷ trọng mã lớn nhất ở mức 0.358 giúp quản lý sự phân tán danh mục."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 13203,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Báo cáo ghi nhận mức độ tập trung danh mục ở một số tài sản cụ thể và sự chênh lệch rủi ro so với thị trường chung. Số lượng giao dịch hiện tại ở mức giới hạn để đưa ra các nhận định chi tiết.",
+     "insights": [
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Mức độ biến động và tập trung rủi ro",
+       "observation": "Chỉ số tập trung HHI đạt 0.2121 với độ biến động danh mục hằng năm là 0.2773, cao hơn mức biến động của thị trường chung là 0.1654.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Bạn có đang cảm thấy thoải mái với mức độ biến động của danh mục hiện tại so với thị trường chung không?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch hạn chế",
+       "observation": "Số lần bán ghi nhận là 0 và số lệnh mua là 8, cho thấy dữ liệu hiện tại chưa đủ số lượng để kết luận về khuynh hướng giao dịch.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Khi có thêm nhiều quyết định giao dịch hơn trong tương lai, bạn sẽ theo dõi các chỉ số này như thế nào?"
+      }
+     ],
+     "strengths": [
+      "Danh mục có sự phân bổ vào nhóm ngành công nghệ với trọng số nhất định."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   }
+  ],
+  "U2": [
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 8866,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Báo cáo ghi nhận số lệnh thực tế trong giai đoạn khá thấp, phản ánh qua số lượng lệnh bán và mua hạn chế. Dữ liệu này giúp bạn quan sát lại nhịp độ phân bổ tài sản của mình.",
+     "insights": [
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch hạn chế",
+       "observation": "Số lần bán ghi nhận là 2 lần qua n_sells, trong khi số lần mua ghi nhận là 8 lần qua n_buys, với số ngày bán là 2 ngày theo n_sell_days.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells",
+        "disposition.n_sell_days"
+       ],
+       "self_check_question": "Với số lượng lệnh hiện tại, bạn có cảm thấy dữ liệu đã đủ để phản ánh toàn diện phong cách phân bổ vốn chưa?"
+      }
+     ],
+     "strengths": [
+      "Tần số giao dịch thấp và có sự kiểm soát về nhịp độ vào lệnh.",
+      "Danh mục có mức độ tập trung được ghi nhận qua các chỉ số trọng số ngành và mã cổ phiếu."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 4047,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Báo cáo ghi nhận số lượng giao dịch còn hạn chế trong giai đoạn đánh giá. Các chỉ số phản ánh mức độ hoạt động và phân bổ tài sản của danh mục theo dữ liệu mô phỏng.",
+     "insights": [
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch chưa đủ",
+       "observation": "Số lượng lệnh bán là 2 và số lượng lệnh mua là 8, chưa đủ để kết luận về khuynh hướng liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Bạn có dự định thực hiện thêm giao dịch để phân tích rõ hơn các mẫu hình hành vi không?"
+      }
+     ],
+     "strengths": [
+      "Số lượng lệnh mua và bán ở mức vừa phải, không phát sinh tần suất giao dịch cao trong giai đoạn này."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 32482,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Dữ liệu giao dịch trong tám tháng cho thấy số lượng lệnh còn ít để phản ánh đầy đủ khuynh hướng đầu tư. Các chỉ số ghi nhận số lệnh bán và mua ở mức thấp.",
+     "insights": [
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch chưa đủ",
+       "observation": "Số lượng lệnh bán là 2 và số lượng lệnh mua là 8, với số ngày bán là 2, cho thấy số lệnh chưa đủ để kết luận về khuynh hướng liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells",
+        "disposition.n_sell_days"
+       ],
+       "self_check_question": "Bạn có dự định bổ sung thêm các giao dịch khác để có bức tranh tổng thể hơn về danh mục không?"
+      }
+     ],
+     "strengths": [
+      "Tỷ trọng phân bổ danh mục được quản lý ở mức có sự tập trung vào mã GAS với tỷ trọng 0.3119."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   }
+  ],
+  "U3": [
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 6787,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Danh mục của bạn có độ tập trung cao vào mã BID và nhóm ngành Ngân hàng. Mức độ biến động hàng năm của danh mục ghi nhận ở mức 0.2035 trong khi biến động của thị trường chung là 0.144.",
+     "insights": [
+      {
+       "flag_id": "concentration",
+       "title": "Tập trung danh mục cao",
+       "observation": "Chỉ số HHI là 0.3526 và tỷ trọng mã lớn nhất chiếm tới 0.4465 trong toàn bộ danh mục.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ],
+       "self_check_question": "Việc phân bổ phần lớn vốn vào một mã và một nhóm ngành duy nhất phản ánh điều gì về chiến lược quản trị rủi ro của bạn?"
+      },
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Biến động danh mục cao hơn thị trường",
+       "observation": "Độ biến động hàng năm của danh mục đạt 0.2035, cao hơn mức 0.144 của thị trường chung trong cùng khoảng thời gian.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Mức độ biến động này có phù hợp với khẩu vị rủi ro và kế hoạch dài hạn của bạn hay không?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Chưa đủ dữ liệu giao dịch",
+       "observation": "Số lượng lệnh bán ghi nhận là 0 lần, khiến dữ liệu chưa đủ để kết luận về khuynh hướng giao dịch.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Khi có thêm các giao dịch đóng vị thế trong tương lai, bạn sẽ theo dõi các chỉ số này như thế nào?"
+      }
+     ],
+     "strengths": [
+      "Danh mục có tỷ trọng tập trung rõ ràng vào nhóm ngành Ngân hàng với top_sector_weight là 0.7177."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 6989,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Danh mục của bạn có mức độ tập trung cao vào một số mã và ngành nhất định. Biến động danh mục vượt mức thị trường chung trong khi dữ liệu giao dịch chưa ghi nhận lệnh bán nào.",
+     "insights": [
+      {
+       "flag_id": "concentration",
+       "title": "Mức độ tập trung danh mục cao",
+       "observation": "Chỉ số HHI của danh mục là 0.3526 với tỷ trọng mã lớn nhất là 0.4465 và tỷ trọng ngành lớn nhất là 0.7177.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight",
+        "concentration.top_sector_weight"
+       ],
+       "self_check_question": "Việc phân bổ tỷ trọng lớn vào một vài mã và ngành có phản ánh đúng kế hoạch quản trị rủi ro của bạn không?"
+      },
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Biến động danh mục cao hơn thị trường",
+       "observation": "Độ biến động năm của danh mục đạt 0.2035 trong khi biến động của benchmark là 0.144, kết hợp với chỉ số HHI là 0.3526.",
+       "evidence_keys": [
+        "performance.vol_annual",
+        "performance.benchmark_vol",
+        "concentration.hhi"
+       ],
+       "self_check_question": "Bạn cảm nhận thế nào khi mức độ biến động của danh mục cao hơn đáng kể so với mặt bằng chung của thị trường?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Chưa đủ dữ liệu lệnh bán",
+       "observation": "Số lượng lệnh bán ghi nhận là 0, do đó chưa đủ dữ liệu để kết luận về khuynh hướng giao dịch khi bán.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Khi nào thì bạn thường cân nhắc việc đóng một trạng thái giao dịch đang nắm giữ?"
+      }
+     ],
+     "strengths": [
+      "Dữ liệu danh mục ghi nhận hiệu suất chi phí giao dịch và thuế rõ ràng với tổng chi phí phí là 94030.0."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 2449,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Danh mục của bạn có mức tập trung cao vào mã BID và ngành Ngân hàng. Biến động danh mục ghi nhận ở mức 0.2035 trong giai đoạn này.",
+     "insights": [
+      {
+       "flag_id": "concentration",
+       "title": "Tập trung danh mục cao",
+       "observation": "Chỉ số HHI của danh mục là 0.3526 và tỷ trọng mã lớn nhất BID chiếm 0.4465 tổng tài sản.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ],
+       "self_check_question": "Việc phân bổ tỷ trọng lớn vào một mã như vậy ảnh hưởng thế nào đến sự ổn định của toàn danh mục?"
+      },
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Chênh lệch mức độ biến động",
+       "observation": "Biến động danh mục đạt 0.2035 trong khi biến động thị trường chung là 0.144, kết hợp với chỉ số HHI ở mức 0.3526.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Mức biến động của danh mục hiện tại có nằm trong giới hạn bạn đã dự tính ban đầu hay không?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch bán chưa đủ",
+       "observation": "Số lần bán ghi nhận là 0 lần (với số lệnh bán là 0).",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Bạn có kế hoạch cụ thể nào cho việc ghi nhận kết quả giao dịch trong thời gian tới không?"
+      }
+     ],
+     "strengths": [
+      "Duy trì danh mục tập trung vào nhóm ngành Ngân hàng theo chiến lược đề ra."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   }
+  ],
+  "U4": [
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 12211,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Danh mục của bạn có mức độ tập trung cao vào một số ít tài sản, đi kèm rủi ro biến động lớn hơn thị trường chung. Số lượng giao dịch hiện tại còn hạn chế để đánh giá toàn diện hành vi dài hạn.",
+     "insights": [
+      {
+       "flag_id": "concentration",
+       "title": "Mức độ tập trung danh mục cao",
+       "observation": "Chỉ số HHI đạt 0.609 và trọng số của mã đứng đầu chiếm 0.7666 tổng danh mục.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ],
+       "self_check_question": "Việc dồn tỷ trọng lớn vào một vài mã ảnh hưởng thế nào đến độ an toàn của danh mục?"
+      },
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Biến động danh mục vượt thị trường",
+       "observation": "Độ biến động hàng năm của danh mục là 0.2147, trong khi độ biến động của thị trường chung là 0.1794 với chỉ số HHI là 0.609.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Bạn đã chuẩn bị tâm lý thế nào cho các nhịp biến động mạnh của danh mục?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch chưa đủ",
+       "observation": "Số lượng lệnh bán là 0, số lượng lệnh mua là 9 và số lượng lệnh bán khi xét herding là 0, cho thấy số lệnh chưa đủ để kết luận về khuynh hướng liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Khi có thêm nhiều dữ liệu giao dịch hơn, bạn sẽ theo dõi những chỉ số nào trước tiên?"
+      }
+     ],
+     "strengths": [
+      "Duy trì kỷ luật trong tần suất giao dịch thấp với trung bình 1.0 giao dịch mỗi tháng."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 6363,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Danh mục của nhà đầu tư hiện tập trung cao độ vào một mã duy nhất và nhóm ngành ngân hàng. Mức độ biến động danh mục cao hơn mức chung của thị trường trong giai đoạn qua.",
+     "insights": [
+      {
+       "flag_id": "concentration",
+       "title": "Mức tập trung danh mục cao",
+       "observation": "Chỉ số HHI đạt 0.609 và tỷ trọng mã lớn nhất chiếm 0.7666 tổng danh mục.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ],
+       "self_check_question": "Việc phân bổ phần lớn vốn vào một mã duy nhất ảnh hưởng thế nào đến độ rủi ro tổng thể của bạn?"
+      },
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Biến động danh mục cao hơn thị trường",
+       "observation": "Độ biến động hàng năm của danh mục ghi nhận ở mức 0.2147 trong khi biến động chuẩn là 0.1794, kết hợp với chỉ số HHI 0.609.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Bạn đã tính toán đến các kịch bản biến động mạnh khi duy trì mức độ tập trung tài sản như vậy chưa?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch chưa đủ",
+       "observation": "Số lượng lệnh bán là 0 và số lượng lệnh mua là 9, cho thấy số lệnh chưa đủ để kết luận về khuynh hướng liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Khi có thêm nhiều quyết định giao dịch hơn, bạn sẽ theo dõi các chỉ số hành vi này như thế nào?"
+      }
+     ],
+     "strengths": [
+      "Duy trì tỷ trọng nhóm ngành ngân hàng cao (0.965) thể hiện rõ định hướng phân bổ của danh mục."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 2294,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Dữ liệu ghi nhận danh mục có mức độ tập trung cao vào một mã duy nhất và độ biến động lớn hơn thị trường chung. Số lượng giao dịch hiện tại còn hạn chế để phân tích sâu hơn.",
+     "insights": [
+      {
+       "flag_id": "concentration",
+       "title": "Mức độ tập trung danh mục cao",
+       "observation": "Chỉ số HHI đạt 0.609 và tỷ trọng mã lớn nhất MBB chiếm 0.7666 tổng danh mục.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "concentration.top_symbol_weight"
+       ],
+       "self_check_question": "Việc dồn tỷ trọng lớn vào một mã ảnh hưởng thế nào đến mức độ biến động tổng thể của danh mục?"
+      },
+      {
+       "flag_id": "risk_mismatch",
+       "title": "Biến động danh mục vượt thị trường",
+       "observation": "Độ biến động hàng năm của danh mục ở mức 0.2147, trong khi biến động chuẩn của thị trường là 0.1794 và chỉ số HHI là 0.609.",
+       "evidence_keys": [
+        "concentration.hhi",
+        "performance.vol_annual",
+        "performance.benchmark_vol"
+       ],
+       "self_check_question": "Danh mục chịu mức biến động này có phù hợp với khả năng chịu đựng rủi ro cá nhân không?"
+      },
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch chưa đủ",
+       "observation": "Số lượng lệnh bán là 0 và số lượng lệnh mua là 9, chưa đủ dữ liệu để kết luận về khuynh hướng hành vi.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Khi có thêm nhiều dữ liệu giao dịch hơn, bạn sẽ theo dõi thêm các chỉ số nào để đánh giá hiệu quả?"
+      }
+     ],
+     "strengths": [
+      "Duy trì kỷ luật giao dịch với tần suất vừa phải trong suốt giai đoạn theo dõi."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   }
+  ],
+  "U5": [
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 1643,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Danh mục của bạn ghi nhận tỷ suất sinh lợi âm trong giai đoạn này với mức độ tập trung vốn vừa phải vào ngành Ngân hàng. Số lượng lệnh giao dịch hiện tại chưa đủ lớn để phản ánh rõ nét các khuynh hướng hành vi.",
+     "insights": [
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch hạn chế",
+       "observation": "Số lượng lệnh mua là 6 và số lần bán là 0, cho thấy dữ liệu hiện tại chưa đủ để kết luận về các khuynh hướng giao dịch liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Bạn có dự định thực hiện thêm các giao dịch khác để có bức tranh toàn diện hơn về danh mục của mình không?"
+      }
+     ],
+     "strengths": [
+      "Duy trì mức độ phân bổ danh mục tập trung vào nhóm ngành Ngân hàng với tỷ trọng ngành cao nhất là 0.566."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng. Các chỉ số phân tích dựa trên dữ liệu lịch sử và không đọc được ý định thực tế của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 4411,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Dữ liệu ghi nhận hoạt động giao dịch còn hạn chế trong giai đoạn này với số lệnh mua là 6 và số lần bán là 0. Tỷ suất sinh lợi đạt -0.0822 trong khi mức độ biến động hàng năm là 0.2231.",
+     "insights": [
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch chưa đủ để kết luận",
+       "observation": "Số lệnh bán ghi nhận là 0 và số lệnh mua là 6, chưa đủ số lượng để kết luận về khuynh hướng liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Liệu việc ghi nhận số lượng lệnh ít có phản ánh đúng toàn bộ chiến lược phân bổ vốn không?"
+      }
+     ],
+     "strengths": [
+      "Danh mục có sự kiểm soát về tần suất giao dịch, hạn chế việc xoay vòng tài sản quá nhanh."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   },
+   {
+    "model": "gemini-3.5-flash-lite",
+    "attempts": 1,
+    "passed": true,
+    "latency_ms": 1791,
+    "first": [],
+    "final": [],
+    "details": [],
+    "content": {
+     "summary": "Dữ liệu ghi nhận hoạt động giao dịch còn khá ít trong giai đoạn qua. Các chỉ số hiện tại phản ánh một số dấu hiệu về phân bổ danh mục cần được xem xét thêm.",
+     "insights": [
+      {
+       "flag_id": "insufficient_data",
+       "title": "Dữ liệu giao dịch hạn chế",
+       "observation": "Số lượng lệnh bán là 0, số lệnh mua là 6 và số ngày bán là 0, cho thấy số lệnh chưa đủ để kết luận về khuynh hướng liên quan.",
+       "evidence_keys": [
+        "disposition.n_sells",
+        "chasing.n_buys",
+        "herding.n_sells"
+       ],
+       "self_check_question": "Bạn có dự định thực hiện thêm các giao dịch khác để có bức tranh rõ ràng hơn về chiến lược của mình không?"
+      }
+     ],
+     "strengths": [
+      "Tỷ trọng nhóm ngành lớn nhất được ghi nhận ở mức 0.566."
+     ],
+     "limitations": "Dữ liệu do người dùng cung cấp hoặc mô phỏng và các chỉ số không đọc được ý định của người giao dịch."
+    }
+   }
+  ]
+ }
+}
